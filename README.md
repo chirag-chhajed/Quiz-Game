@@ -1,1 +1,1 @@
-# KBC-Quiz-Game
+# Quiz-Game
