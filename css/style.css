@@ -15,7 +15,6 @@ body{
     text-transform: uppercase;
     text-align: center;
     font-size: 5rem;
-    
 }
 .main-container h2{
     color: var(--font-color-2);
@@ -52,4 +51,34 @@ body{
 .main-container > .img-container div:hover{
     transform: scale(1.05);
 }
-
+@media screen and (max-width:1070px) {
+    .main-container .img-container{
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 3rem;
+    }
+}
+@media screen and (max-width:750px) {
+    .main-container .img-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        /* padding-bottom: 3rem; */
+    }
+    .main-container > .img-container div{
+        place-self: center;
+    }
+}
+@media screen and (max-width:450px) {
+    .main-container{
+        margin-top: 10vh;
+        padding-inline: 1rem;
+    }
+    .main-container h1{
+        font-size: 4rem;
+    }
+    .main-container h2{
+        font-size: 2rem;
+        margin-bottom: 10vh;
+        
+    }
+}
