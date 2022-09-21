@@ -14,13 +14,15 @@ body {
   backdrop-filter: blur(4px) saturate(182%);
   -webkit-backdrop-filter: blur(4px) saturate(182%);
   background-color: rgba(239, 239, 239, 0.29);
-  border-radius: 2rem;
+  border-radius: 3.125rem;
   border: 1px solid rgba(255, 255, 255, 0.125);
   padding: 0 5rem 0 5rem;
   color: white;
   font-weight: 600;
   display: grid;
   place-content: center;
+  box-shadow: 0px 0px 20px 27px rgba(0, 0, 0, 0.25);
+
 }
 .main-container .question {
   font-family: "Inter", sans-serif;
@@ -64,4 +66,79 @@ body {
   text-align: center;
   margin-top: 1.5rem;
   margin-left: auto;
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+}
+.next {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  border-radius: 5px;
+  border: none;
+  background-color: #343a40
+}
+.next:hover {
+  border-radius: 5px;
+  padding-right: 24px;
+  padding-left:8px;
+}
+.next:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+.next:after {
+  content: "\00BB";
+  position: absolute;
+  opacity: 0;
+  font-size: 20px;
+  line-height: 40px;
+  top: 0;
+  right: -20px;
+  transition: 0.4s;
+}
+.previous{
+  min-width: 50px;
+  height: 50px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  border-radius: 50%;
+  border: none;
+  background-color: #343a40
+}
+.previous:hover {
+  border-radius: 50%;
+  padding-right: 30px;
+  padding-left:8px;
+}
+.previous:hover:after {
+  opacity: 1;
+  left: 15px;
+}
+.previous:after {
+  content: "\00AB";
+  position: absolute;
+  opacity: 0;
+  font-size: 20px;
+  line-height: 40px;
+  top: 0;
+  left: -20px;
+  transition: 0.4s;
+  vertical-align: middle;
 }
