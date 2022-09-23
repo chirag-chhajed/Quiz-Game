@@ -10,7 +10,8 @@ const instruction = document.querySelector(".instructions")
 const skipBtn = document.querySelector('.skipBtn')
 const audio = document.getElementById('audio')
 const images = document.querySelectorAll('a')
-audio.volume = 0.2;
+audio.volume = 0.5;
+let j = 0;
 
 
 playbtn.addEventListener('click',()=>{
@@ -23,6 +24,7 @@ startQuiz.addEventListener('click',()=>{
     mainContainer.style.visibility = "visible"
     showQuiz()
 })
+skipBtn.addEventListener("click",()=>{showQuiz();j+=1})
 
 
 // images.forEach(e => {e.addEventListener('click',()=>{audio.onplay(); audio.volume = 0.1})})
@@ -45,18 +47,18 @@ const chooseRandom = (arr, num = 1) => {
  };
  const randomQuestion = chooseRandom(number,10)
  console.log(randomQuestion)
- let i = 0;
+
 function showQuiz(){
     
     // setInterval(()=>{i+=1; console.log("number increased")},2*1000)
-    queNum.innerHTML = i+1
-    question.innerHTML = hpQuestions[randomQuestion[i]].question;
-    answers.innerHTML = `<div class="option">${hpQuestions[randomQuestion[i]].options[0].text}</div>
-    <div class="option">${hpQuestions[randomQuestion[i]].options[1].text}</div>
-    <div class="option">${hpQuestions[randomQuestion[i]].options[2].text}</div>
-    <div class="option">${hpQuestions[randomQuestion[i]].options[3].text}</div>`
-   console.log(i)
-   skipBtn.addEventListener("click",()=>{i+=1; console.log(i)})
+    queNum.innerHTML = j+1
+    question.innerHTML = hpQuestions[randomQuestion[j]].question;
+    answers.innerHTML = `<div class="option">${hpQuestions[randomQuestion[j]].options[0].text}</div>
+    <div class="option">${hpQuestions[randomQuestion[j]].options[1].text}</div>
+    <div class="option">${hpQuestions[randomQuestion[j]].options[2].text}</div>
+    <div class="option">${hpQuestions[randomQuestion[j]].options[3].text}</div>`
+   console.log(j)
+   
 }
 
 
