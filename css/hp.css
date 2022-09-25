@@ -68,7 +68,7 @@ body {
   background-color: rgba(18, 225, 18, 0.771);
 }
 .instructions ul{
-  list-style-type: none;
+  /* list-style-type: none; */
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
