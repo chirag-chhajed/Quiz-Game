@@ -179,7 +179,7 @@ body {
   background-color: #343a40;
 }
 
-.skipBtn:hover {
+/* .skipBtn:hover {
   border-radius: 5px;
   padding-right: 24px;
   padding-left: 8px;
@@ -199,4 +199,4 @@ body {
   top: 0;
   right: -20px;
   transition: 0.4s;
-}
+} */
